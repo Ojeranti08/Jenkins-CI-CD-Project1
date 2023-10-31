@@ -42,14 +42,14 @@ pipeline {
         success {
             script { 
                 // Send email for successful build
-              mail to: "Kemiola190@gmail.com"
+              mail to: "Kemiola190@gmail.com",
                    subject: "Build Successful - ${currentBuild.fullDisplayName}",
                    body: "Congratulations! The build was successful.\n\nCheck console output at ${BUILD_URL}"
             }
         failure {
           script { 
               // Send email for failed build
-              mail to: "Kemiola190@gmail.com"
+              mail to: "Kemiola190@gmail.com",
                    subject: "Build Failed - ${currentBuild.fullDisplayName}",
                    body: "Oops! The build failed.\n\nCheck console output at ${BUILD_URL}" 
         }
