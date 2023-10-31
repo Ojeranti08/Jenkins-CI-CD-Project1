@@ -45,8 +45,8 @@ pipeline {
               mail to: "Kemiola190@gmail.com",
                    subject: "Build Successful - ${currentBuild.fullDisplayName}",
                    body: "Congratulations! The build was successful.\n\nCheck console output at ${BUILD_URL}"
-            }
-        }            
+      }
+  }            
    failure {
     script { 
         // Send email for failed build
@@ -55,5 +55,4 @@ pipeline {
              body: "Oops! The build failed.\n\nCheck console output at ${BUILD_URL}" 
         }
      }
-  }
-}       
+  }      
