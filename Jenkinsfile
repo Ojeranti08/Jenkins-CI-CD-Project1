@@ -19,7 +19,7 @@ pipeline {
               echo "Running Tests"
               //Define test steps here
                 sh "mvn test" 
-                stash (name: "JenkinsProject", includes: "target/*.war" 
+                stash (name: "JenkinsProject", includes: "target/*.war") 
             }
         }
         stage('Deploy') {
