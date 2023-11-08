@@ -8,7 +8,7 @@ pipeline {
             steps {
               echo "Building the project"
               // Define build steps here
-                sh "/opt/apache-maven-3.9.5/bin/mvn"
+                sh '/opt/apache-maven-3.9.5/bin/mvn clean package'
             }
         }
         stage('Test') {
