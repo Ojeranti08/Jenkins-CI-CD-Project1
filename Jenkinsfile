@@ -32,8 +32,8 @@ pipeline {
                 unstash "JenkinsProject" 
                 sh "~/apache-tomcat-7.0.94/bin/startup.sh"
                 sh "sudo rm -rf ~/apache*/webapp/*.war"
-                sh "sudo mkdir -p /home/centos/apache/webapps/"
-                sh "sudo mv target/*.war ~/apache/webapps/"
+                #sh "sudo mkdir -p /home/centos/apache/webapps/"
+                sh "sudo mv target/*.war ~/apache*/webapps/"
                 sh "sudo systemctl daemon-reload"
                 sh "~/apache-tomcat-7.0.94/bin/startup.sh"
             }
